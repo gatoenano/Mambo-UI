@@ -1,0 +1,221 @@
+//# Globals
+// color
+$btn-more-color: #000;
+$btn-secondary-color: #606060;
+// background color
+$btn-primary-bg: #fdb915;
+$btn-more-bg: #ededed;
+$btn-save-bg: #3a3c3f;
+$btn-delete-bg: #ededed;
+$btn-disabled-bg: #fdb915;
+// paddings
+$btn-padding-x: 1.910rem !default;
+$btn-padding-y: .220rem !default;
+
+
+
+//# Custom CSS
+
+// access to the container element of the current web component
+:host {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+// access to the parent element of the current web component main container
+:host-context(.alerts-view-more) {
+    color: #9b9b9b;
+    & .btn-link {
+        color: #9b9b9b;
+        @include no-padding('x');
+
+          &,
+          &:active,
+          &.active {
+            outline: 0;
+            color: #9b9b9b;
+            text-decoration: none;
+
+            &:focus,
+            &.focus {
+              @include tab-focus();
+              color: #9b9b9b;
+              background-color: transparent;
+              border: 0;
+              outline: 0;
+              text-decoration: none;
+            }
+          }
+    }
+}
+
+// Button base style
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: $input-btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-sm, $line-height, $btn-border-radius);
+  @include transition(all .2s ease-in-out);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus();
+      outline: 0;
+    }
+  }
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    outline: 0;
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: $cursor-disabled;
+    opacity: .65;
+    @include box-shadow(none);
+  }
+
+  &.equalize-position {
+    margin-top: 1.375rem;
+  }
+}
+
+// future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+.btn-primary {
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+.btn-custom {
+    border: 0;
+}
+.btn-more {
+    font-size: 1.25rem;
+    line-height: 0.8rem;
+    padding: 0.225rem;
+    @include no-padding('y');
+    @include button-variant($btn-more-color, $btn-more-bg, $btn-more-bg);
+}
+.btn-save {
+    @include button-variant($btn-primary-color, $btn-save-bg, $btn-save-bg);
+}
+.btn-delete {
+    font-weight: bold;
+    @include button-variant($btn-secondary-color, $btn-delete-bg, $btn-delete-bg);
+}
+.btn-disabled {
+    @include button-variant($btn-primary-color, $btn-disabled-bg, $btn-disabled-bg);
+}
+
+// remove all backgrounds
+.btn-primary-outline {
+  @include button-outline-variant($btn-primary-bg);
+}
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: normal;
+  color: $link-color;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &:disabled {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  @include hover {
+    border-color: transparent;
+  }
+  @include hover-focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+  }
+  &:disabled {
+    @include hover-focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.button-status-text {
+    align-self: flex-end;
+    color: #9b9b9b ;
+    display: none;
+    font-size: 0.6875rem;
+    padding: 0.2rem 0;
+    &.show {
+        display: inline-block;
+    }
+}
+.button-icon {
+    display: none;
+    fill: #606060;
+    height: 0.93rem;
+    left: 2.2rem;
+    top: 1.8rem;
+    position: absolute;
+    width: 0.8rem;
+
+    &.show {
+        display: inline-block;
+    }
+}
+// button sizes
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+}
+
+// block button
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

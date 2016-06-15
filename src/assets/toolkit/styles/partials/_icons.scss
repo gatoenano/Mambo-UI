@@ -1,0 +1,14 @@
+// Component globals
+$sprite: map-get($icons, sprite);
+
+// icons css
+@each $name, $icon in $icons {
+    @if $name != sprite {
+        .#{$name} {
+            @include sprite(#{$name});
+            //fill: currentColor;
+            &:hover {
+            }
+        }
+    }
+}

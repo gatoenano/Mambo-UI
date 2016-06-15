@@ -1,0 +1,77 @@
+// Convert pixels to rems
+@function px2rem($px, $base-font-size: $baseFontSize) {
+    @if unitless($px) {
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+        @return px2rem($px * 1px, $base-font-size);
+    } @else if unit($px) == rem {
+        @return $px;
+    }
+    @return ($px / $base-font-size) * 1rem;
+}
+
+// Gets an attribute from the sprite sass map
+@function sprite-attr($icon, $attr) {
+    $newIcon: map-get($icons, $icon);
+    @if $newIcon == null {
+        @warn "Can't find an icon with the name #{$icon}";
+    }
+    @return map-get($newIcon, $attr);
+}
+
+@function icon-attr($icon) {
+    $attr: (
+        width: sprite-attr($icon, width),
+        height: sprite-attr($icon, height)
+    );
+
+    @return $attr;
+}
+
+// Gets an explicit icon properties
+@mixin sprite($icon, $type: all) {
+    $iconMap: icon-attr($icon);
+
+    // Outputs dimensions in rem
+    width: px2rem(map-get($iconMap, width));
+    height: px2rem(map-get($iconMap, height));
+}
+
+// Font antialising on Mac OS X
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// Style
+@mixin display-centered-content() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    transition: $transition;
+  }
+}
+
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    box-shadow: $shadow;
+  }
+}
+// Resets the chosen padding
+@mixin no-padding($side) {
+    @if $side == 'all' {
+            padding: 0 !important;
+    } 
+    @else if $side == 'x' {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+    }
+    @else if $side == 'y' {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+    }
+    @else {
+            padding-#{$side}: 0 !important;
+    }
+}

@@ -1,0 +1,26 @@
+//# Global variables
+@import 'partials/_variables';
+
+//# Vendor modules
+@import 'partials/vendor';
+
+//# Custom mixins
+@import "partials/mixins";
+
+//# Custom modules
+// global
+@import 'partials/sprites';
+@import 'partials/fonts';
+@import 'partials/icons';
+@import 'partials/utils';
+
+// components
+@import 'partials/buttons';
+
+// structures
+@import 'partials/header';
+
+//# Override (this partial always has to be the latest loaded)
+@import 'partials/override';
+
+

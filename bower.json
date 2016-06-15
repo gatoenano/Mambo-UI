@@ -1,0 +1,13 @@
+{
+  "name": "Mambo-UI",
+  "description": "A UI toolkit",
+  "main": "README.md",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

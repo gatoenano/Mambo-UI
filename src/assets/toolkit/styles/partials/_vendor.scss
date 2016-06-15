@@ -1,0 +1,12 @@
+//# Bootstrap Core variables and mixins
+@import "./bower_components/bootstrap/scss/_variables.scss";
+@import "./bower_components/bootstrap/scss/_mixins.scss";
+
+//# Bootstrap CSS reset
+@import "./bower_components/bootstrap/scss/_normalize.scss";
+@import "./bower_components/bootstrap/scss/_reboot.scss";
+
+//# Bootstrap Core CSS
+@import "./bower_components/bootstrap/scss/_grid.scss";
+@import "./bower_components/bootstrap/scss/_images.scss";
+@import "./bower_components/bootstrap/scss/_utilities-spacing.scss";

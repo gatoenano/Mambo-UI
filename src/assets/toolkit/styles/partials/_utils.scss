@@ -1,0 +1,24 @@
+//# Utils
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+.svg-fill-none {
+    fill: none!important;
+}
+.svg-fill-light {
+    fill: $color-light;
+}
+.svg-fill-dark {
+    fill: $color-dark;
+}
+.svg-stroke-light {
+    stroke: $color-light;
+}
+.opacity_3 {
+    opacity: 0.3;
+}
+.opacity_6 {
+    opacity: 0.6;
+}

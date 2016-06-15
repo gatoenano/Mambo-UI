@@ -1,0 +1,13 @@
+/**
+ * Toolkit styles
+ */
+
+// Toolkit CSS
+@import 'partials/index';
+
+//# Common rules
+body {
+    font-family: Asap, sans-serif;
+    @include font-smoothing();
+}
+
