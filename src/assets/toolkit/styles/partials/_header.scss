@@ -20,6 +20,7 @@
 
         &.ui-header-notification_active {
             @include display-centered-content();
+            margin-right: px2rem(-19px);
         }
 
         & .ui-header-notification-number {
@@ -29,13 +30,13 @@
         }
     }
 
-    .ui-header-local {
+    .ui-header-main {
         align-items: center;
         background-color: $color-orange;
         display: flex;
         height: 4.0625rem;
         justify-content: space-between;
-        padding: 0 3.7% 0 7.3%;
+        padding: 0 5% 0 10%;
 
         & .ui-header-brand {
             line-height: 0;
@@ -50,11 +51,15 @@
                 width: 5rem;
             }
         }
-        & .ui-header-alerts {
+        & .ui-header-local {
             display: flex;
 
             & .icon-alert {
                 fill: $color-dark;
+
+                @include hover {
+                    fill: $color-light;
+                }
             }
         }
     }
@@ -65,7 +70,7 @@
         display: flex;
         height: 4.0625rem;
         justify-content: space-around;
-        padding: 0 8% 0 2%;
+        padding: 0 25% 0 5%;
 
         & .ui-header-user-initials {
             fill: $color-grey-light;
@@ -77,7 +82,7 @@
         & .icon-account {
             stroke-width: 0.13rem;
 
-            & .icon-account:hover {
+            @include hover {
                 fill: none!important;
             }
         }
@@ -88,10 +93,6 @@
                 background-color: $color-red;
                 left: px2rem(-2px);
 
-                &.ui-header-notification_active {
-                    margin-right: px2rem(-19px);
-                }
-
                 & .ui-header-notification-number {
                     color: $color-light;
                 }
@@ -100,6 +101,12 @@
     }
     // Media queries rules
     @include media-breakpoint-down(sm) {
+        .row [class*='col-'] {
+            @include no-padding('all');
+        }
+        .ui-header-main {
+            padding-right: 9%;
+        }
         .ui-header-global {
             @include no-padding('all');
         }

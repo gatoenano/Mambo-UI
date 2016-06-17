@@ -1,20 +1,46 @@
-//# Vendor config variables
+//# Vendor config variables #//
 $enable-flex:               true;
 $enable-grid-classes:       true;
 $enable-transitions:        true;
 
-//# Toolkit config variables
-$baseFontSize:              16px !default;
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1140px,
+  xxl: 1330px
+);
 
-//# Styles
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+  // Big extra large screen / extra wide desktop
+  xxl: 1400px
+);
+
+//# Toolkit config variables
+$baseFontSize:              16px;
+
+//# Styles #//
 
 // colors
-$color-light:       #fff !default;
-$color-dark:        #1e2123 !default;
-$color-black:       #000 !default;
-$color-grey:        #3a3c3f !default;
-$color-grey-light:  #a5a6a7 !default;
-$color-grey-dark:   #333 !default;
-$color-orange:      #fdb915 !default;
-$color-red:         #e90e36 !default;
-$color-gold:        #b0810e !default;
+$color-light:           #fff !default;
+$color-dark:            #1e2123 !default;
+$color-black:           #000 !default;
+$color-grey:            #3a3c3f !default;
+$color-grey-dark:       #333 !default;
+$color-grey-dark-1:     #606060 !default;
+$color-grey-dark-2:     #9b9b9b !default;
+$color-grey-light:      #a5a6a7 !default;
+$color-grey-light-1:    #ededed !default;
+$color-orange:          #fdb915 !default;
+$color-red:             #e90e36 !default;
+$color-gold:            #b0810e !default;
