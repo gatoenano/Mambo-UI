@@ -18,3 +18,12 @@ $settings: (
 @import 'partials/layout';
 @import 'partials/menu';
 @import 'partials/logo';
+
+//# Overrides
+.f-item-preview {
+    @include clearfix;
+
+    & .container.btn_preview .btn {
+        margin: 1rem;
+    }
+}
