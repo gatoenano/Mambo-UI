@@ -1,6 +1,6 @@
 ---
 notes: |
-  These are notes associated with this `alert` component.
+  The `alert` structure 
 ---
 
 <div class="ui-alert">
@@ -8,7 +8,7 @@ notes: |
         <section class="col-xs-8 col-md-8">
             <header class="ui-alert-header">
                 <svg class="ui-alert-icon ui-alert-icon_show">
-                    <use xlink:href="assets/toolkit/images/sprite.symbol.svg#icon-star" />
+                    <use xlink:href="static/sprite.symbol.svg#icon-star" />
                 </svg>
                 <h4 class="ui-alert-title">Intranet - Aprobar factura</h4>
             </header>
@@ -20,13 +20,14 @@ notes: |
             <div class="ui-alert-interaction">
                 <span class="ui-alert-status-text ui-alert-status-text_show">Finalizada</span>
                 <div class="ui-alert-user-action">
-                    <svg class="btn-icon">
-                        <use xlink:href="assets/toolkit/images/sprite.symbol.svg#icon-star" />
-                    </svg>
-                    <button type="button" class="btn btn-primary">Intranet</button>
+                    <button type="button" class="btn btn-primary">
+                        <svg class="btn-icon btn-icon_left">
+                            <use xlink:href="static/sprite.symbol.svg#icon-star" />
+                        </svg>
+                        <span>Intranet</span>
+                    </button>
                 </div>
             </div>
         </div>
-        
     </div>
 </div>
