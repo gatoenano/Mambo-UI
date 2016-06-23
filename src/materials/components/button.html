@@ -1,5 +1,47 @@
 ---
 notes: |
-  These are notes associated with this `button` component.
+  The .btn classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
 ---
-<button type="button" class="btn btn-primary">Button</button>
+
+<!-- primary button -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- primary button without background -->
+<button type="button" class="btn btn-primary-outline">Outline</button>
+
+<!-- delete button -->
+<button type="button" class="btn btn-delete">Delete</button>
+
+<!-- save button -->
+<button type="button" class="btn btn-save">Save</button>
+
+<!-- more button -->
+<button type="button" class="btn btn-more">···</button>
+
+<!-- disabled button and link tag -->
+<button type="button" class="btn disabled">Disabled</button>
+
+<!-- button with icon integrated to left -->
+<button type="button" class="btn btn-delete">
+    <svg class="btn-icon btn-icon_left btn-icon_show">
+        <use xlink:href="static/sprite.symbol.svg#icon-star" />
+    </svg>
+    <span>Icon left</span>
+</button>
+
+<!-- button with icon integrated to right -->
+<button type="button" class="btn btn-save">
+    <span>Icon right</span>
+    <svg class="btn-icon btn-icon_right btn-icon_show svg-fill-light">
+        <use xlink:href="static/sprite.symbol.svg#icon-star" />
+    </svg>
+</button>
+
+<!-- button looking like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Button</button>
+
+<!-- a button link also can be a link tag -->
+<a type="button" class="btn btn-link" role="button">Link tag</a>
+
+<!-- a button also can be an input tag -->
+<input class="btn btn-primary" type="button" value="Input">

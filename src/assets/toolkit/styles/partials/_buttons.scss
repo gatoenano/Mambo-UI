@@ -60,16 +60,9 @@ $btn-padding-y: .220rem;
         opacity: .65;
         @include box-shadow(none);
     }
-
-    &.equalize-position {
-        margin-top: 1.375rem;
-    }
 }
 .btn-primary {
     @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-}
-.btn-custom {
-    border: 0;
 }
 .btn-more {
     font-size: 1.25rem;
@@ -84,17 +77,6 @@ $btn-padding-y: .220rem;
 .btn-delete {
     font-weight: bold;
     @include button-variant($btn-secondary-color, $btn-delete-bg, $btn-delete-bg);
-}
-.btn-disabled {
-    @include button-variant($btn-primary-color, $btn-disabled-bg, $btn-disabled-bg);
-}
-a.btn.disabled,
-fieldset[disabled] a.btn {
-    pointer-events: none;
-}
-// remove all backgrounds
-.btn-primary-outline {
-    @include button-outline-variant($btn-primary-bg);
 }
 // Make a button look and behave like a link
 .btn-link {
@@ -132,15 +114,21 @@ fieldset[disabled] a.btn {
 // For buttons with integrated icon
 .btn-icon {
     display: none;
-    fill: #606060;
-    height: 0.93rem;
-    left: 1.7rem;
-    top: 0.15rem;
+    height: 0.8rem;
     position: relative;
+    top: 0.1rem;
     width: 0.8rem;
 
     &.btn-icon_show {
         display: inline-block;
+    }
+
+    &.btn-icon_left {
+        left: -0.5rem;
+    }
+
+    &.btn-icon_right {
+        right: -0.5rem;
     }
 }
 // button sizes
@@ -152,20 +140,12 @@ fieldset[disabled] a.btn {
     // line-height: ensure proper height of button next to small input
     @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
 }
-// block button
-.btn-block {
-    display: block;
-    width: 100%;
+// disabled state for non button elements
+a.btn.disabled,
+fieldset[disabled] a.btn {
+    pointer-events: none;
 }
-// Vertically space out multiple block buttons
-.btn-block + .btn-block {
-    margin-top: 5px;
-}
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-    &.btn-block {
-        width: 100%;
-    }
+// remove all backgrounds
+.btn-primary-outline {
+    @include button-outline-variant($btn-primary-bg);
 }
