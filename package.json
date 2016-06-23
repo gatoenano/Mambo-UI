@@ -39,6 +39,7 @@
     "gulp-sass": "^2",
     "gulp-sourcemaps": "^1",
     "gulp-util": "^3",
+    "handlebars-helper-equal": "^1.0.0",
     "imports-loader": "^0.6.4",
     "run-sequence": "^1",
     "script-loader": "^0.6.1",
@@ -48,5 +49,5 @@
     "README.md",
     "src/assets/toolkit/styles",
     "dist/assets/toolkit"
-  ],
+  ]
 }
