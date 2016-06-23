@@ -6,9 +6,6 @@ $sprite: map-get($icons, sprite);
     @if $name != sprite {
         .#{$name} {
             @include sprite(#{$name});
-            //fill: currentColor;
-            &:hover {
-            }
         }
     }
 }
