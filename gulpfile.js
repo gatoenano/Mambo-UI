@@ -126,7 +126,10 @@ gulp.task('serve', function () {
 
 	browserSync({
 		server: {
-			baseDir: config.dest
+			baseDir: config.dest,
+			routes: {
+	            "/static": config.dest + "/assets/toolkit/images"
+	        }
 		},
 		notify: false,
 		logPrefix: 'FABRICATOR',
