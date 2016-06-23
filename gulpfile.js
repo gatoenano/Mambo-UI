@@ -115,7 +115,10 @@ gulp.task('fonts', function () {
 gulp.task('assemble', function (done) {
 	assemble({
 		logErrors: config.dev,
-		dest: config.dest
+		dest: config.dest,
+		helpers: {
+            iseq: require('handlebars-helper-equal')
+        }
 	});
 	done();
 });
