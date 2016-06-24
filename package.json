@@ -49,9 +49,5 @@
       "src/assets/toolkit/images",
       "src/assets/toolkit/scripts"
     ]
-  },
-  "files": [
-    "README.md",
-    "src"
-  ]
+  }
 }
