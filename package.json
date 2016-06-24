@@ -42,9 +42,16 @@
     "script-loader": "^0.6.1",
     "webpack": "^1.12.1"
   },
+  "directories": {
+    "scss": "src/assets/toolkit/styles",
+    "assets": [
+      "src/assets/toolkit/fonts",
+      "src/assets/toolkit/images",
+      "src/assets/toolkit/scripts"
+    ]
+  },
   "files": [
     "README.md",
-    "!src/assets/toolkit",
-    "src/assets/toolkit/**"
+    "src"
   ]
 }
