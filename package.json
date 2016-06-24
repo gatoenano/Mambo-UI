@@ -1,7 +1,7 @@
 {
   "name": "Mambo-UI",
   "version": "0.0.1",
-  "description": "A UI toolkit",
+  "description": "A UI toolkit for building Front-end code",
   "main": "README.md",
   "scripts": {
     "gulp": "gulp",
@@ -13,6 +13,7 @@
     "url": "https://github.com/gatoenano/Mambo-UI.git"
   },
   "author": "@gatoenano",
+  "license": "UNLICENSED",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=2.0.0"
@@ -43,7 +44,7 @@
   },
   "files": [
     "README.md",
-    "src/assets/toolkit/styles",
-    "dist/assets/toolkit"
+    "!src/assets/toolkit",
+    "src/assets/toolkit/**"
   ]
 }
