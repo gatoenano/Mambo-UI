@@ -3,6 +3,9 @@ $enable-flex:               true;
 $enable-grid-classes:       true;
 $enable-transitions:        true;
 
+//# Assets paths
+$assets-path: '/assets/toolkit' !default;
+
 $container-max-widths: (
   sm: 576px,
   md: 720px,
