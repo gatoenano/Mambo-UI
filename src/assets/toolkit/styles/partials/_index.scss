@@ -1,27 +1,27 @@
 //# Global variables
-@import 'partials/variables';
+@import 'variables';
 
 //# Vendor modules
-@import 'partials/vendor';
+@import 'vendor';
 
 //# Custom mixins
-@import "partials/mixins";
+@import "mixins";
 
 //# Custom modules
 // global
-@import 'partials/sprites';
-@import 'partials/fonts';
-@import 'partials/icons';
-@import 'partials/utils';
+@import 'sprites';
+@import 'fonts';
+@import 'icons';
+@import 'utils';
 
 // components
-@import 'partials/buttons';
+@import 'buttons';
 
 // structures
-@import 'partials/header';
-@import 'partials/alerts';
+@import 'header';
+@import 'alerts';
 
 //# Override (this partial always has to be the latest loaded)
-@import 'partials/override';
+@import 'override';
 
 
