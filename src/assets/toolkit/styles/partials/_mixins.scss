@@ -61,17 +61,17 @@
 // Resets the chosen padding
 @mixin no-padding($side) {
     @if $side == 'all' {
-            padding: 0 !important;
+        padding: 0 !important;
     } 
     @else if $side == 'x' {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     @else if $side == 'y' {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
     }
     @else {
-            padding-#{$side}: 0 !important;
+        padding-#{$side}: 0 !important;
     }
 }
