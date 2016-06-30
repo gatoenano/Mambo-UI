@@ -1,3 +1,18 @@
+//# Alert mixins
+// ui-alert rules for extra-small devices
+@mixin xs-devices-rules() {
+    .ui-alert-icon.ui-alert-icon_show {
+        margin-left: -1.3rem;
+    }
+    .ui-alert-interaction {
+        padding: 0;
+    }
+    .ui-alert-user-action .btn {
+        padding: 0.22rem 1rem;
+    }
+}
+
+//# Alert styles
 .ui-alert {
     &.ui-alert-read,
     &.ui-alert-read .ui-alert-header {
@@ -47,7 +62,6 @@
 
         &.ui-alert-text_show {
             height: auto;
-            max-height: 5rem;
         }
     }
 
@@ -83,17 +97,23 @@
 
     // Media queries rules
     @include media-breakpoint-down(xs) {
-        .ui-alert-icon.ui-alert-icon_show {
-            margin-left: -1.3rem;
-        }
-        .ui-alert-interaction {
-            padding: 0;
-        }
-        .ui-alert-user-action .btn {
-            padding: 0.22rem 1rem;
-        }
+        @include xs-devices-rules;
     }
     @include media-breakpoint-down(sm) {
+        .row [class*='col-'] {
+            @include no-padding('all');
+        }
+    }
+
+    // Media queries rules as classes
+    &.ui-alert-xs {
+        .row [class*='col-'] {
+            @include no-padding('all');
+        }
+        @include xs-devices-rules;
+    }
+
+    &.ui-alert-sm {
         .row [class*='col-'] {
             @include no-padding('all');
         }

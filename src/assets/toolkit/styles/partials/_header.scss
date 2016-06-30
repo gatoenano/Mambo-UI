@@ -1,3 +1,18 @@
+//# Alert mixins
+// ui-header rules for small devices
+@mixin sm-devices-rules() {
+    .row [class*='col-'] {
+        @include no-padding('all');
+    }
+    .ui-header-main {
+        padding-right: 9%;
+    }
+    .ui-header-global {
+        @include no-padding('all');
+    }
+}
+
+//# Header styles
 .ui-header {
     & svg[class*="icon-"] {
         fill: $color-light;
@@ -101,14 +116,14 @@
     }
     // Media queries rules
     @include media-breakpoint-down(sm) {
+        @include sm-devices-rules;
+    }
+
+    // Media queries rules as classes
+    &.ui-header-sm {
         .row [class*='col-'] {
             @include no-padding('all');
         }
-        .ui-header-main {
-            padding-right: 9%;
-        }
-        .ui-header-global {
-            @include no-padding('all');
-        }
+        @include sm-devices-rules;
     }
 }
