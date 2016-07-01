@@ -35,6 +35,7 @@
             position: absolute;
             top: 0;
             width: 1.313rem;
+            @extend .svg-stroke-light;
 
             &.ui-alert-icon_show {
                 display: inline-block;
