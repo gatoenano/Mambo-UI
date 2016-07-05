@@ -16,6 +16,7 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var webpack = require('webpack');
+var handlebars = require('handlebars');
 
 
 // configuration
@@ -117,7 +118,8 @@ gulp.task('assemble', function (done) {
 		logErrors: config.dev,
 		dest: config.dest,
 		helpers: {
-            iseq: require('handlebars-helper-equal')
+            iseq: require('handlebars-helper-equal'),
+            compare: require('handlebars-helpers').comparison().compare
         }
 	});
 	done();
