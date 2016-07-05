@@ -1,0 +1,164 @@
+---
+title: Grid system | Mambo UI
+section: Grid system
+exampleContent: "<div class='row'>\n<div class='col-sm-4'>One of three columns</div>\n<div class='col-sm-4'>One of three columns</div>\n<div class='col-sm-4'>One of three columns</div>\n</div>"
+fabricator: true
+---
+
+<div class="f-item-heading-group">
+    <h2 class="f-item-heading">{{section}}</h2>
+    <p>The grid system it’s based on a 12 column layout and has multiple tiers, one for each media query range. It can be use it with Sass mixins or the predefined classes.</p>
+</div>
+
+<h2>How it works</h2>
+<ul>
+    <li>There are three major components—containers, rows, and columns.</li>
+    <li>Containers—<code>.container</code> for fixed width or <code>.container-fluid</code> for full width—center the site’s contents and help align the grid content.</li>
+    <li>Rows are horizontal groups of columns that ensure that the columns are lined up properly.</li>
+    <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+    <li>Column classes indicate the number of columns to use out of the possible 12 per row. So, for a three equal-width columns, it has to use <code>.col-sm-4</code>, for example.</li>
+    <li>Column <code>width</code>s are set in percentages, so they’re always fluid and sized relative to their parent element.</li>
+    <li>Columns have horizontal <code>padding</code> to create the gutters between individual columns.</li>
+    <li>There are five grid tiers, one for each responsive breakpoint: extra small, small, medium, large, and extra large.</li>
+    <li>Grid tiers are based on minimum widths, meaning they apply to that one tier and all those above it (e.g., <code>.col-sm-4</code> applies to small, medium, large, and extra large devices).</li>
+    <li>It can be use predefined grid classes or Sass mixins for more semantic markup.</li>
+</ul>
+
+<h3 class="m-t-3">Quick start example</h3>
+<p>Three column row example</p>
+<div class="f-item-code">
+    <div class='container'>
+        <pre><code class='language-markup'>{{exampleContent}}</code></pre>
+    </div>
+</div>
+<div class="container grid_system">
+    <div class="row">
+        <div class="col-sm-4">One of three columns</div>
+        <div class="col-sm-4">One of three columns</div>
+        <div class="col-sm-4">One of three columns</div>
+    </div>
+</div>
+
+<h3 class="m-t-3">Five grid tiers</h3>
+<p>The grid system it’s based on a 12 column layout and has five tiers, one for each range of devices supported. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+
+<div class="container grid_system">
+    <div class="row">
+      <div class="col-xs-4">.col-xs-4</div>
+      <div class="col-xs-4">.col-xs-4</div>
+      <div class="col-xs-4">.col-xs-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">.col-sm-4</div>
+      <div class="col-sm-4">.col-sm-4</div>
+      <div class="col-sm-4">.col-sm-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">.col-lg-4</div>
+      <div class="col-lg-4">.col-lg-4</div>
+      <div class="col-lg-4">.col-lg-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-4">.col-xl-4</div>
+      <div class="col-xl-4">.col-xl-4</div>
+      <div class="col-xl-4">.col-xl-4</div>
+    </div>
+</div>
+
+<h3 class="m-t-3">Three equal columns</h3>
+<p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+<div class="container grid_system">
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+</div>
+
+<h3 class="m-t-3">Three unequal columns</h3>
+<p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+<div class="container grid_system">
+    <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-3">.col-md-3</div>
+    </div>
+</div>
+
+<h3 class="m-t-3">Two columns</h3>
+<p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+<div class="container grid_system">
+    <div class="row">
+        <div class="col-md-8">.col-md-8</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+</div>
+
+<h3 class="m-t-3">Two columns with two nested columns</h3>
+<p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
+<p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+<div class="container grid_system">
+    <div class="row">
+        <div class="col-md-8">
+        .col-md-8
+            <div class="row">
+                <div class="col-md-6">.col-md-6</div>
+                <div class="col-md-6">.col-md-6</div>
+            </div>
+        </div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+</div>
+
+<h3 class="m-t-3">Mixed: mobile and desktop</h3>
+<p>With the tiers of classes: xs (phones), sm (tablets), md (desktops), lg (larger desktops), xl (extra large desktops). It can be use nearly any combination of these classes to create more dynamic and flexible layouts. Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+<div class="container grid_system">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">.col-xs-6</div>
+        <div class="col-xs-6">.col-xs-6</div>
+    </div>
+</div>
+
+<h3 class="m-t-3">Mixed: mobile, tablet, and desktop</h3>
+<div class="container grid_system">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
+        <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+    </div>
+</div>
+
+<h3 class="m-t-3">Offset, push, and pull resets</h3>
+<p>Reset offsets, pushes, and pulls at specific breakpoints.</p>
+<div class="container grid_system">
+    <div class="row">
+        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+        <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+    </div>
+</div>

@@ -17,7 +17,19 @@
 			<a href="styleguide.html" class="f-menu__heading">Guidelines</a>
 		</li>
 
+		<li>
+			<a href="layoutguide.html" class="f-menu__heading">Layout</a>
+			<ul>
+				{{#each materials.layout.items}}
+				<li>
+					<a href="layoutguide.html#{{@key}}">{{name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</li>
+
 		{{#each materials}}
+		{{#compare @key "!=" "layout"}}
 		<li>
 			<a href="{{@key}}.html" class="f-menu__heading">{{name}}</a>
 			<ul>
@@ -28,6 +40,7 @@
 				{{/each}}
 			</ul>
 		</li>
+		{{/compare}}
 		{{/each}}
 
 		{{#each views}}
