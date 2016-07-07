@@ -1,0 +1,82 @@
+//# Sections
+// Components -> Button
+.f-item-preview {
+    @include clearfix;
+
+    & .container.btn_preview .btn {
+        margin: 1rem;
+    }
+}
+
+// Layout -> Grid
+.grid_system {
+    & .row {
+        margin-bottom: 1rem;
+
+        & .row {
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+    }
+
+    & [class*="col-"] {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: rgba(86,61,124,.15);
+        border: 1px solid rgba(86,61,124,.2);
+    }
+
+    & hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+// Layout -> Responsive utilities
+.table-responsive {
+    display: block;
+    width: 100%;
+    min-height: .01%;
+    overflow-x: auto;
+
+    & .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        border: 1px solid #eceeef;
+
+        & thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #eceeef;
+        }
+
+        & tbody th {
+            font-weight: 400;
+        }
+
+        & td,
+        & th {
+            padding: .75rem;
+            line-height: 1.5;
+            vertical-align: top;
+            border: 1px solid #eceeef;
+            text-align: center;
+        }
+
+        & th small {
+            display: block;
+            font-weight: 400;
+            color: #999;
+        }
+
+        & td.is-visible {
+            color: #468847;
+            background-color: #dff0d8!important;
+        }
+
+        & td.is-hidden {
+            color: #ccc;
+            background-color: #f9f9f9!important;
+        }
+    }
+}
