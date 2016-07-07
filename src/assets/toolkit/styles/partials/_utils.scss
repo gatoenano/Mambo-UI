@@ -1,4 +1,28 @@
-//# Utils
+//# Responsive utilities
+// hide elements depending on grid breakpoints
+@each $bp in map-keys($grid-breakpoints) {
+  .hidden-#{$bp}-up {
+    @include media-breakpoint-up($bp) {
+      display: none !important;
+    }
+  }
+  .hidden-#{$bp}-down {
+    @include media-breakpoint-down($bp) {
+      display: none !important;
+    }
+  }
+}
+// responsive text alignment
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    .text-#{$breakpoint}-left   { text-align: left !important; }
+    .text-#{$breakpoint}-right  { text-align: right !important; }
+    .text-#{$breakpoint}-center { text-align: center !important; }
+  }
+}
+
+//# Global utilities
+// gutter options between columns
 .no-gutter > [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
@@ -9,6 +33,7 @@
 .no-gutter-left > [class*='col-'] {
     padding-left: 0;
 }
+// svg color variants
 .svg-fill-none {
     fill: none!important;
 }
@@ -21,6 +46,7 @@
 .svg-stroke-light {
     stroke: $color-light;
 }
+// opacity properties
 .opacity_3 {
     opacity: 0.3;
 }
