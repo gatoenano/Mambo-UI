@@ -12,6 +12,13 @@
     }
 }
 
+// ui-header rules for extra small devices
+@mixin xs-devices-rules {
+    .ui-header-global {
+        border: 0px;
+    }
+}
+
 //# Header styles
 .ui-header {
     & svg[class*="icon-"] {
@@ -119,11 +126,16 @@
         @include sm-devices-rules;
     }
 
+    @include media-breakpoint-down(xs) {
+        @include xs-devices-rules;
+    }
+
     // Media queries rules as classes
     &.ui-header-sm {
-        .row [class*='col-'] {
-            @include no-padding('all');
-        }
         @include sm-devices-rules;
+    }
+
+    &.ui-header-xs {
+        @include xs-devices-rules;
     }
 }
