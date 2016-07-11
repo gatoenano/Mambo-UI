@@ -22,16 +22,16 @@
 }
 
 //# Global utilities
-// gutter options between columns
+// gutter options for columns
 .no-gutter > [class*='col-'] {
-    padding-right: 0;
-    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
 }
 .no-gutter-right > [class*='col-'] {
-    padding-right: 0;
+    margin-right: 0;
 }
 .no-gutter-left > [class*='col-'] {
-    padding-left: 0;
+    margin-left: 0;
 }
 // svg color variants
 .svg-fill-none {
@@ -43,8 +43,14 @@
 .svg-fill-dark {
     fill: $color-dark;
 }
+.svg-stroke-none {
+    stroke: none!important;
+}
 .svg-stroke-light {
     stroke: $color-light;
+}
+.svg-stroke-dark {
+    stroke: $color-dark;
 }
 // opacity properties
 .opacity_3 {
@@ -52,4 +58,48 @@
 }
 .opacity_6 {
     opacity: 0.6;
+}
+// text alignment
+.text-justify { 
+    text-align: justify !important;
+}
+.text-nowrap { 
+    white-space: nowrap !important;
+}
+.text-truncate { 
+    @include text-truncate; 
+}
+// text transformation
+.text-lowercase { 
+    text-transform: lowercase !important;
+}
+.text-uppercase { 
+    text-transform: uppercase !important;
+}
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+// text weights and italics
+.font-weight-normal { 
+    font-weight: normal;
+}
+.font-weight-bold {
+    font-weight: bold;
+}
+.font-italic { 
+    font-style: italic;
+}
+// contextual colors
+.text-muted {
+    color: $text-muted;
+}
+// element alignment
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flex-horizontal-center {
+    display: flex;
+    justify-content: center;
 }

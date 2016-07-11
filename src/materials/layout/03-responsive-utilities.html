@@ -1,5 +1,5 @@
 <h2 class="f-item-heading m-b-1">Responsive utilities</h2>
-<p>These utility classes are for showing and hiding content by device via media query to complement each device’s presentation</p>
+<p>These utility classes are for showing, hiding or positioning content by device via media query to complement each device’s presentation</p>
 
 <h3>Available classes</h3>
 <ul>
@@ -8,7 +8,7 @@
     <li>There are no explicit “visible”/”show” responsive utility classes; the element is visible by simply not hiding it at that breakpoint size.</li>
     <li>Also it's possible to combine one <code>.hidden-*-up</code> class with one <code>.hidden-*-down</code> class to show an element only on a given interval of screen sizes. For example, <code>.hidden-sm-down.hidden-xl-up</code> shows the element only on medium and large viewports. Using multiple <code>.hidden-*-up</code> classes or multiple <code>.hidden-*-down</code> classes is redundant and pointless.</li>
 </ul>
-<div class="container">
+<div class="container m-t-3">
     <div class="row">
         <div class="table-responsive">
             <table class="table">
@@ -122,4 +122,17 @@
             </table>
         </div>
     </div>
+</div>
+
+<h3 class="m-t-3">Text alignment</h3>
+<p>For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.</p>
+<div class="container m-t-2">
+    <p class="text-xs-left"><code>.text-xs-left</code>Left aligned text on all viewport sizes.</p>
+    <p class="text-xs-center"><code>.text-xs-center</code>Center aligned text on all viewport sizes.</p>
+    <p class="text-xs-right"><code>.text-xs-right</code>Right aligned text on all viewport sizes.</p>
+
+    <p class="text-sm-left"><code>.text-sm-left</code>Left aligned text on viewports sized SM (small) or wider.</p>
+    <p class="text-md-right"><code>.text-md-right</code>Right aligned text on viewports sized MD (medium) or wider.</p>
+    <p class="text-lg-left"><code>.text-lg-left</code>Left aligned text on viewports sized LG (large) or wider.</p>
+    <p class="text-xl-center"><code>.text-xl-center</code>Left aligned text on viewports sized XL (extra-large) or wider.</p>
 </div>

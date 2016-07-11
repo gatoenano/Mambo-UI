@@ -1,0 +1,102 @@
+<h2 class="f-item-heading m-b-1">Global utilities</h2>
+<p>Global utilities are designed to reduce the frequency of highly repetitive declarations in CSS while allowing for quick and easy development.</p>
+
+<h3 class="m-t-3">Spacing</h3>
+<p>Assign margin or padding to an element or a subset of its sides with shorthand classes. The classes are named using the format: <span class="font-italic">{property}-{sides}-{size}</span> (size 3rem max.)</p>
+<p>Here are some representative examples of these classes:</p>
+<div class="container m-t-2">
+    <div class="row">
+        <!-- margin - top - 0 -->
+        <p><code>.m-t-0</code>: margin - top - 0</p>
+    </div>
+    <div class="row">
+        <!-- margin - bottom - 1 -->
+        <p><code>.m-b-1</code>: margin - bottom - 1</p>
+    </div>
+    <div class="row">
+        <!-- margin - x - atuo -->
+        <p><code>.m-x-auto</code>: margin - left&right - atuo</p>
+    </div>
+    <div class="row">
+        <!-- padding - left - 2 -->
+        <p><code>.p-l-2</code>: padding - left - 2</p>
+    </div>
+    <div class="row">
+        <!-- padding - rigth - 3 -->
+        <p><code>.p-r-3</code>: padding - right - 3</p>
+    </div>
+    <div class="row">
+        <!-- padding - rigth - 3 -->
+        <p><code>.p-a-3</code>: padding - all - 3</p>
+    </div>
+</div>
+
+<h3 class="m-t-3">Center content</h3>
+<p>Displays an element at the center of his container.</p>
+<div class="container m-t-2">
+    <div class="row">
+        <div class="center-block">Element centered with <code>.center-block</code></div>
+    </div>
+    <div class="row flex-horizontal-center">
+        <div>Element centered with <code>.flex-horizontal-center</code></div>
+    </div>
+</div>
+
+<h3 class="m-t-3">Text transform</h3>
+<p>Transform text with text capitalization classes.</p>
+<div class="container m-t-2">
+    <p><code>.text-lowercase</code><span class="text-lowercase">: Lowercased text.</span></p>
+    <p><code>.text-uppercase</code><span class="text-uppercase">: Uppercased text.</span></p>
+    <p><code>.text-capitalize</code><span class="text-capitalize">: CapiTaliZed text.</span></p>
+</div>
+
+<h3 class="m-t-3">Font weight and italics</h3>
+<p>Quickly change the weight (boldness) or italicize text.</p>
+<div class="container m-t-2">
+    <p><code>.font-weight-bold</code><span class="font-weight-bold">: Bold text.</span></p>
+    <p><code>.font-weight-normal</code><span class="font-weight-normal">: Italicized text.</span></p>
+    <p><code>.font-italic</code><span class="font-italic">: Italicized text.</span></p>
+</div>
+
+<h3 class="m-t-3">Font weight and italics</h3>
+<p>Quickly change the weight (boldness) or italicize text.</p>
+<div class="container m-t-2">
+    <p><code>.font-weight-bold</code><span class="font-weight-bold">: Bold text.</span></p>
+    <p><code>.font-weight-normal</code><span class="font-weight-normal">: Italicized text.</span></p>
+    <p><code>.font-italic</code><span class="font-italic">: Italicized text.</span></p>
+</div>
+
+<h3 class="m-t-3">Horizontal description</h3>
+<p>Align terms and descriptions horizontally by using the grid system’s predefined classes. For longer terms, it can be optionally add a <code>.text-truncate</code> class to truncate the text with an ellipsis.</p>
+<div class="container m-t-2">
+    <div class="row flex-horizontal-center m-b-1">
+        <div class="col-sm-3 font-weight-bold">Example one</div>
+        <div class="col-sm-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+    <div class="row flex-horizontal-center m-b-1">
+        <div class="col-sm-3 font-weight-bold text-truncate">Truncated text example truncated text example</div>
+        <div class="col-sm-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+</div>
+
+<h3 class="m-t-3">Misc classes</h3>
+<p class="m-t-1">Opacity properties.</p>
+<div class="container m-t-1">
+    <p><code>.opacity_3</code><span class="opacity_3">: opacity 3</span></p>
+    <p><code>.opacity_6</code><span class="opacity_6">: opacity 6</span></p>
+</div>
+
+<p class="m-t-2">SVG colors.</p>
+<div class="container m-t-1">
+    <p><code>.svg-fill-none .svg-stroke-dark</code>
+        <svg class="icon-star opacity_6 svg-fill-none svg-stroke-dark">
+            <use xlink:href="static/sprite.symbol.svg#icon-star" />
+        </svg>
+    </p>
+    <p><code>.svg-fill-dark .svg-stroke-light</code>
+        <svg class="icon-star opacity_6 svg-fill-dark svg-stroke-light">
+            <use xlink:href="static/sprite.symbol.svg#icon-star" />
+        </svg>
+    </p>
+    <p>More classes: <code>.svg-fill-light & .svg-stroke-none</code></p>
+</div>
