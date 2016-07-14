@@ -53,6 +53,9 @@
     stroke: $color-dark;
 }
 // opacity properties
+.opacity_1 {
+    opacity: 0.3;
+}
 .opacity_3 {
     opacity: 0.3;
 }
@@ -93,6 +96,10 @@
 .text-muted {
     color: $text-muted;
 }
+// separator line
+.separator-line {
+    @include separator-line;
+}
 // element alignment
 .center-block {
     display: block;
@@ -102,4 +109,21 @@
 .flex-horizontal-center {
     display: flex;
     justify-content: center;
+}
+// element display
+.display-flex {
+    display: flex;
+}
+// container widths
+@each $name, $width in $container-max-widths {
+    .width-container-#{$name} {
+        width: $width
+    }
+}
+
+// breakpoint widths
+@each $name, $width in $grid-breakpoints {
+    .width-breakpoint-#{$name} {
+        width: $width
+    }
 }
