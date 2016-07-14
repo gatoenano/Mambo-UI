@@ -52,6 +52,9 @@
         }
     }
 
+    &.ui-header-global-section .ui-header-main {
+        border-bottom: 0.2rem $color-dark solid;
+    }
     .ui-header-main {
         align-items: center;
         background-color: $color-orange;
@@ -76,7 +79,7 @@
         & .ui-header-local {
             display: flex;
 
-            & .icon-alert {
+            & [class*="icon-"] {
                 fill: $color-dark;
 
                 @include hover {
@@ -84,6 +87,10 @@
                 }
             }
         }
+    }
+
+    &.ui-header-global-section .ui-header-global {
+        border-bottom: none;
     }
     .ui-header-global {
         align-items: center;

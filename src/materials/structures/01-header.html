@@ -1,6 +1,15 @@
 ---
 notes: |
-  The `alert` structure
+    <p>The `header` structure has some classes for different status:</p>
+    <div class="m-b-3">
+        <p class="m-b-1">
+            <code>.ui-header-global-section</code>: <span>changes the borders to the global section border color.</span><br />
+            <code>.ui-header-sm</code> & <code>.ui-header-xs</code>: <span> applies the media queries css rules in its related width as a css classes.</span><br />
+            <code>.ui-header-notification_active</code>: <span>shows the notification rectangle.</span><br />
+            <code>.ui-tooltip-arrow-top_left</code>: <span>puts the arrow at left of the tooltip container.</span><br />
+            <code>.ui-tooltip-arrow-top_right</code>: <span>puts the arrow at right of the tooltip container.</span><br />
+        </p>      
+    </div> 
 ---
 
 <div class="ui-header">
@@ -22,11 +31,13 @@ notes: |
                     <svg class="icon-alert opacity_3 m-r-2">
                         <use xlink:href="static/sprite.symbol.svg#icon-alert" />
                     </svg>
-                    <svg class="icon-alert opacity_3">
-                        <use xlink:href="static/sprite.symbol.svg#icon-alert" />
-                    </svg>
-                    <div class="ui-header-notification ui-header-notification_active">
-                        <span class="ui-header-notification-number">4</span>
+                    <div class="display-flex">
+                        <svg class="icon-alert opacity_3">
+                            <use xlink:href="static/sprite.symbol.svg#icon-alert" />
+                        </svg>
+                        <div class="ui-header-notification ui-header-notification_active">
+                            <span class="ui-header-notification-number">4</span>
+                        </div>
                     </div>
                 </div>
             </div>
