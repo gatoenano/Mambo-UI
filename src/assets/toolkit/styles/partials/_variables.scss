@@ -1,7 +1,8 @@
-//# Vendor config variables #//
+//# Vendor config variables
 $enable-flex:               true;
 $enable-grid-classes:       true;
 $enable-transitions:        true;
+$enable-shadows:            true;
 
 //# Assets paths
 $assets-path: '/assets/toolkit' !default;
@@ -30,9 +31,11 @@ $grid-breakpoints: (
 );
 
 //# Toolkit config variables
-$baseFontSize:              16px;
 
-//# Styles #//
+
+//# Styles variables
+// Fonts
+$baseFontSize:              16px;
 
 // colors
 $color-light:           #fff !default;
@@ -42,6 +45,7 @@ $color-grey:            #3a3c3f !default;
 $color-grey-dark:       #333 !default;
 $color-grey-dark-1:     #606060 !default;
 $color-grey-dark-2:     #9b9b9b !default;
+$color-grey-dark-3:     #979797 !default;
 $color-grey-light:      #a5a6a7 !default;
 $color-grey-light-1:    #ededed !default;
 $color-orange:          #fdb915 !default;

@@ -80,3 +80,55 @@
         }
     }
 }
+
+// Structure -> Tooltips
+.ui-tooltip_preview {
+    align-items: center;
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+
+    & .ui-tooltip-target {
+        cursor: pointer;
+        position: relative;
+
+        & > .ui-tooltip {
+            left: 27%;
+
+            &.ui-tooltip-arrow-bottom_left:after {
+                left: 18%;
+            }
+        }
+
+        &.ui-tooltip-right > .ui-tooltip {
+            left: 0;
+            top: -115%;
+        }
+
+        &.ui-tooltip-left > .ui-tooltip {
+            right: 0;
+            left: initial;
+        }
+        
+        &:hover > .ui-tooltip {
+            opacity: 1;
+            pointer-events: auto;
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+            -o-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+
+    }
+
+    & .ui-tooltip {
+        -webkit-transform: translateY(0.6rem);
+        -moz-transform: translateY(0.6rem);
+        -ms-transform: translateY(0.6rem);
+        -o-transform: translateY(0.6rem);
+        transform: translateY(0.6rem);
+    }
+}

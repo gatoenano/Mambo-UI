@@ -1,0 +1,96 @@
+//# Tooltip mixins
+@mixin arrow() {
+    border-left: solid transparent 15px;
+    border-right: solid transparent 15px;
+    border-top: solid $color-light 18px;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -18px;
+    position: absolute;
+    width: 0;            
+}
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+@mixin tooltip-pointer-gap {
+    content: " ";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+//# Tooltip style
+.ui-tooltip {
+    background-color: $color-light;
+    border-top-color: $color-light;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1050;
+    @include transition(all .2s ease-in-out);
+
+    &.ui-tooltip-bg-dark {
+        background-color: $color-grey;
+        border-top-color: $color-grey;
+        color: $color-light;
+    }
+
+    &.ui-tooltip-arrow-top,
+    &.ui-tooltip-arrow-top_left,
+    &.ui-tooltip-arrow-top_right {
+        @include box-shadow(0px 5px 20px -6px rgba(0, 0, 0, 0.28));
+
+        &:after {
+            @include arrow;
+            border-top-color: inherit;
+            top: -18px;
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        /* This bridges the gap so you can mouse into the tooltip without it disappearing */
+        &:before {
+            @include tooltip-pointer-gap;
+            top: -20px;
+        }
+    }
+
+    &.ui-tooltip-arrow-top_left:after {
+        left: 5%
+    }
+
+    &.ui-tooltip-arrow-top_right:after {
+        left: 95%
+    }
+
+    &.ui-tooltip-arrow-bottom,
+    &.ui-tooltip-arrow-bottom_left,
+    &.ui-tooltip-arrow-bottom_right {
+        @include box-shadow(0px -5px 20px -6px rgba(0, 0, 0, 0.28));
+
+        &:after {
+            @include arrow;
+            border-top-color: inherit;
+            bottom: -18px;
+        }
+
+        /* This bridges the gap so you can mouse into the tooltip without it disappearing */
+        &:before {
+            @include tooltip-pointer-gap;
+            bottom: -20px;
+        }
+    }
+
+    &.ui-tooltip-arrow-bottom_left:after {
+        left: 5%
+    }
+
+    &.ui-tooltip-arrow-bottom_right:after {
+        left: 95%
+    }
+}
