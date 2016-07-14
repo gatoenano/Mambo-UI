@@ -58,6 +58,13 @@
     box-shadow: $shadow;
   }
 }
+
+@mixin separator-line() {
+    border: 1px solid $color-grey-dark-3;
+    display: block;
+    opacity: 0.1; 
+}
+
 // Resets the chosen padding
 @mixin no-padding($side) {
     @if $side == 'all' {
