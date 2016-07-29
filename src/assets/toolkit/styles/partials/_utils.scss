@@ -53,8 +53,11 @@
     stroke: $color-dark;
 }
 // opacity properties
+.opacity_0 {
+    opacity: 0;
+}
 .opacity_1 {
-    opacity: 0.3;
+    opacity: 0.1;
 }
 .opacity_3 {
     opacity: 0.3;
@@ -100,6 +103,18 @@
 .separator-line {
     @include separator-line;
 }
+.underline-short {
+    position: relative;
+
+    &:before {
+        border-bottom: px2rem(2px) solid #fdb915;
+        bottom: -0.6rem;
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 3.6rem;
+    }
+}
 // element alignment
 .center-block {
     display: block;
@@ -111,8 +126,20 @@
     justify-content: center;
 }
 // element display
+.display-none {
+    display: none !important;
+}
 .display-flex {
     display: flex;
+}
+.display-obscure:before {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 // container widths
 @each $name, $width in $container-max-widths {
@@ -120,7 +147,6 @@
         width: $width
     }
 }
-
 // breakpoint widths
 @each $name, $width in $grid-breakpoints {
     .width-breakpoint-#{$name} {
