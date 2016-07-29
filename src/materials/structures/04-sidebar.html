@@ -1,0 +1,93 @@
+---
+notes: |
+    <p>The `sidebar` structure has some classes for different status:</p>
+    <div class="m-b-3">
+        <p class="m-b-1">
+            <code>.ui-sidebar_hide</code>: <span>hides the sidebar and shows an icon to open it.</span><br />
+            <code>.ui-sidebar-sm</code> & <code>.ui-sidebar-md</code>: <span> applies the media query css rule in its related width as a css class.</span><br />
+        </p>
+    </div> 
+---
+
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <nav role="navigation" class="ui-sidebar">
+            <div class="ui-sidebar-open">
+                <svg class="icon-arrow-right">
+                    <use xlink:href="static/sprite.symbol.svg#icon-arrow-right"></use>
+                </svg>
+            </div>
+            <ul class="ui-sidebar-menu">
+                <li class="ui-sidebar-menu-header">
+                    <div class="ui-sidebar-menu-header-title">
+                        <a class="ui-sidebar-close" href="javascript:void(0);">
+                            <svg class="icon-arrow-left">
+                                <use xlink:href="static/sprite.symbol.svg#icon-arrow-left" />
+                            </svg>
+                        </a>
+                        <svg class="icon-config">
+                            <use xlink:href="static/sprite.symbol.svg#icon-config" />
+                        </svg>
+                        <p class="ui-sidebar-menu-header-text">Configuración</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <span>Datos generales</span>
+                        <svg class="icon-arrow-right">
+                            <use xlink:href="static/sprite.symbol.svg#icon-arrow-right" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <span>Avisos</span>
+                        <svg class="icon-arrow-right">
+                            <use xlink:href="static/sprite.symbol.svg#icon-arrow-right" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <span>Otras opciones</span>
+                        <svg class="icon-arrow-right">
+                            <use xlink:href="static/sprite.symbol.svg#icon-arrow-right" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <span>Mas opciones</span>
+                        <svg class="icon-arrow-right">
+                            <use xlink:href="static/sprite.symbol.svg#icon-arrow-right" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <span>Mas opciones</span>
+                        <svg class="icon-arrow-right">
+                            <use xlink:href="static/sprite.symbol.svg#icon-arrow-right" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main class="col-sm-8">
+        <h2>Main content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Secondary content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </main>
+</div>

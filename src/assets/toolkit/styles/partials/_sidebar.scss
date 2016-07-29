@@ -1,0 +1,174 @@
+//# Sidebar mixins
+// ui-sidebar rules for small devices
+@mixin sm-devices-rules() {
+    & .ui-sidebar-menu {
+        & .ui-sidebar-menu-header {
+            background-color: $color-black;
+
+            & .ui-sidebar-menu-header-title {
+                margin-left: 0;
+                padding: 0.9rem 0 0.9rem 0;        
+                text-align: center;
+
+                & .ui-sidebar-close {
+                    left: 2rem;
+                    position: absolute;
+                    display: inline-flex;
+                }
+
+                & .icon-config {
+                    visibility: hidden;
+                }
+            }
+        }
+
+        & li > a {
+            padding: 0.9rem 2rem;
+        }
+    }
+}
+
+// ui-sidebar rules for medium devices
+@mixin md-devices-rules() {
+    & .ui-sidebar-menu {
+        & .ui-sidebar-menu-header {
+            & .ui-sidebar-menu-header-title {
+                padding-left: 2rem;        
+            }
+        }
+
+        & li > a {
+            padding: 0.9rem 2rem;
+        }
+    }
+}
+
+//# Sidebar style
+.ui-sidebar {
+    background-color: $color-grey;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1060;
+    transform: translate3d(0,0,0);
+    @include transition(all .3s ease-in-out);
+
+    &.ui-sidebar_hide {
+        transform: translate3d(-120%,0,0);
+
+        & .ui-sidebar-open {
+            opacity: 1;
+
+            & .icon-arrow-right {
+                height: 1.325rem;
+                width: 0.9375rem;
+            }
+        }
+    } 
+
+    & .ui-sidebar-open {
+        cursor: pointer;
+        opacity: 0;
+        position: absolute;
+        right: -18%;
+        top: 1rem;
+        @include transition(opacity .4s ease-in-out);
+    }
+
+    & .ui-sidebar-menu {
+        background-color: $color-grey;
+        list-style: none;
+        position: absolute;
+        width: inherit;
+        -webkit-padding-start: 0;
+        -moz-padding-start: 0;
+        -ms-padding-start: 0;
+        -o-padding-start: 0;
+        padding-start: 0;
+
+        & .ui-sidebar-menu-header-title {
+            color: $color-light;
+            margin-left: 2rem;
+            padding: 0.9rem 0rem 0.9rem 6.140rem;
+            position: relative;
+
+            & .ui-sidebar-close {
+                display: none;
+            }
+
+            & .ui-sidebar-menu-header-text {
+                margin-bottom: 0;
+            }
+
+            & .icon-arrow-left {
+                fill: $color-light;
+                height: 1.325rem;
+                left: 2rem;
+            }
+
+            & .icon-config {
+                fill: $color-light;
+                margin-left: -2rem;
+                position: absolute;
+                top: 1.1rem;
+            }
+        }
+
+        & li {
+
+            &:after {
+                border-bottom: 0.1rem solid $color-grey-dark-3;
+                content: "";
+                display: block;
+                height: 0.1rem;
+                opacity: 0.1;
+                width: 100%;
+            }
+
+            & > a {
+                align-items: center;
+                color: $color-grey-light;
+                display: inline-flex;
+                font-size: px2rem(14px);
+                justify-content: space-between;
+                padding: 0.9rem 0.9rem 0.9rem 6.140rem;
+                text-decoration: none;
+                width: 100%;
+
+                &:active,
+                &:focus,
+                &:hover {
+                    background-color: $color-black;
+                    color: $color-light;
+
+                    & svg {
+                        fill: $color-light;
+                    }
+                }
+            }
+
+            & .icon-arrow-right {
+                fill: $color-grey-light;
+                height: 0.6875rem;
+            }
+        }
+    }
+
+    // Media queries rules
+    @include media-breakpoint-down(sm) {
+        @include sm-devices-rules;
+    }
+
+    @include media-breakpoint-down(md) {
+        @include md-devices-rules;
+    }
+
+    // Media queries rules as classes
+    &.ui-sidebar-sm {
+        @include sm-devices-rules;
+    }
+
+    &.ui-sidebar-md {
+        @include sm-devices-rules;
+    }
+}
