@@ -132,3 +132,29 @@
         transform: translateY(0.6rem);
     }
 }
+
+// Components -> Icons
+.ui-icons_preview {
+
+    & .icon-view {
+        display: flex;
+        flex-direction: column;
+
+        & svg {
+            align-self: center;
+            fill: #979797;
+            height: 2rem;
+            width: 2rem;
+        }
+
+        & .icon-view_reverse {
+            stroke: #979797;
+            fill: transparent;
+            stroke-width: 0.1rem;
+        }
+
+        & code {
+            margin-top: 1rem;
+        }
+    }
+}

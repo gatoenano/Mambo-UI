@@ -6,9 +6,11 @@
 		</svg>
 	</span>
 	{{/if}}
+	{{#compare @key '!=' 'icons'}}
 	<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 		<svg>
 			<use xlink:href="#f-icon-code" />
 		</svg>
 	</span>
+	{{/compare}}
 </div>
