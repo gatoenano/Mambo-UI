@@ -1,0 +1,108 @@
+//# Checkbox config
+$bg-select-primary-color : $color-orange;
+
+//# Checkbox style
+.ui-checkbox {
+    display: flex;
+    position: relative;
+
+    & .ui-checkbox-input {
+        cursor: pointer;
+        visibility: hidden;
+
+        &:checked {
+
+            & + label {
+                background-color: $bg-select-primary-color;
+                border-color: $bg-select-primary-color;
+
+                &:after {
+                    opacity: 1;
+                }
+
+                &:hover {
+                    border-color: rgba(0, 0, 0, 0.6);
+                }
+            }
+        }
+
+        &:disabled {
+
+            & + label {
+                border-color: $color-grey-light-2;
+                cursor: auto;
+            }
+
+            & ~ .ui-checkbox-text {
+                color: $color-grey-light-2;
+            }
+
+            &:checked {
+
+                & + label {
+                    background-color: $color-grey-light-2;
+                    border-color: $color-grey-light-2;
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    & .ui-checkbox-label {
+        border-radius: 0.25rem;
+        border: 1px solid #d8d8d8;
+        cursor: pointer;
+        height: 1.125rem;
+        left: 0;
+        margin: 0;
+        width: 1.125rem;
+        position: absolute;
+        top: 0;
+
+        &:after {
+            border: 0.125rem solid #fcfff4;
+            border-top: none;
+            border-right: none;
+            content: '';
+            height: 0.3125rem;
+            left: 0.25rem;
+            opacity: 0;
+            position: absolute;
+            top: 0.25rem;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            width: 0.5625rem;
+        }
+
+        &:hover {
+            border-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    & .ui-checkbox-text {
+        font-size: px2rem(13px);
+        margin-left: 0.7rem;
+    }
+
+    &.ui-checkbox_error {
+        color: $color-red-1;
+
+        & .ui-checkbox-label {
+            border-color: $color-red-1;
+
+            &:hover {
+                border-color: $color-red-1;
+            }
+        }
+
+        & .ui-checkbox-text {
+            color: $color-red-1;
+        }
+    }
+}

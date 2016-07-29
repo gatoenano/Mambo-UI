@@ -1,3 +1,31 @@
-<label>
-	<input type="checkbox" /> Checkbox
-</label>
+---
+notes: |
+    <p>The `checkbox` component with the <code>:disabled</code> property, appears with disabled style. Also, for error status in red.</p>
+    <div class="m-b-3">
+        <p class="m-b-1">
+            <code>.ui-checkbox_error</code>: <span>highlights an error showing the label and checkbox in red.</span><br />
+            With the <code>:disabled</code> property, the checkbox element appears with disabled style.<br />
+        </p>
+    </div>
+---
+
+<div class="row">
+    <!-- default checkbox -->
+    <div class="ui-checkbox m-l-3">
+        <input id="input1" class="ui-checkbox-input" type="checkbox" checked/>
+        <label for="input1" class="ui-checkbox-label"></label>
+        <span class="ui-checkbox-text">Default checkbox</span>
+    </div>
+    <!-- checkbox disabled -->
+    <div class="ui-checkbox m-l-3">
+        <input id="input2" class="ui-checkbox-input" type="checkbox" checked disabled/>
+        <label for="input2" class="ui-checkbox-label"></label>
+        <span class="ui-checkbox-text">Disabled checkbox</span>
+    </div>
+    <!-- checkbox error -->
+    <div class="ui-checkbox ui-checkbox_error m-l-3">
+        <input id="input3" class="ui-checkbox-input" type="checkbox" />
+        <label for="input3" class="ui-checkbox-label"></label>
+        <span class="ui-checkbox-text">Checkbox error</span>
+    </div>
+</div>

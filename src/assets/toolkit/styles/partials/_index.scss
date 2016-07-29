@@ -16,11 +16,15 @@
 
 // components
 @import 'buttons';
+@import 'selects';
+@import 'checkbox';
+@import 'radio';
 
 // structures
 @import 'header';
 @import 'alerts';
 @import 'tooltip';
+@import 'sidebar';
 
 //# Override (this partial always has to be the latest loaded)
 @import 'override';
