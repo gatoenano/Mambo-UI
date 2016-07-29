@@ -24,6 +24,7 @@
 .ui-tooltip {
     background-color: $color-light;
     border-top-color: $color-light;
+    cursor: auto;
     display: flex;
     opacity: 0;
     pointer-events: none;
