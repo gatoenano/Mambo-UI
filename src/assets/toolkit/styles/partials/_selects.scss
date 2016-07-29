@@ -1,0 +1,78 @@
+//# Select style
+.ui-select {
+    align-items: flex-end;
+    color: $color-grey-dark-2;
+    display: flex;
+
+    & .ui-select-label {
+        position: relative;
+
+        & .ui-select-label-text {
+            display: block;
+            font-size: px2rem(15px);
+            margin-bottom: 0.6rem;
+
+            &.ui-select-label-text_left {
+                display: inline-block;
+                margin: 0.1rem 0.6rem 0 0;
+            }
+        }
+    
+        & .ui-select-options {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 1px solid $color-grey-light-2;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            display: inline-block;
+            font-size: px2rem(15px);
+            font-weight: normal;
+            line-height: 1.5;
+            outline: none;
+            padding: 0.22rem 2.2rem 0.22rem 0.7rem;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            &:disabled {
+                color:  $color-grey-light-3;
+                border-color: $color-grey-light-3;
+                
+                & + .ui-select-arrow {
+                    fill: $color-grey-light-3;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        & .ui-select-arrow {
+            fill: $color-grey-dark-2;
+            height: 1rem;
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            position: absolute;
+            pointer-events: none;
+            right: 1rem;
+            stroke: $color-grey-dark-2;
+            stroke-width: px2rem(2px);
+            bottom: 0.45rem;
+            width: 0.3rem;
+        }
+    }
+
+    &.ui-select_error {
+        color: $color-red-1;
+
+        & .ui-select-options {
+            border-color: $color-red-1;
+
+            & + .ui-select-arrow {
+                stroke: $color-red-1;
+            }
+        }
+    }
+}

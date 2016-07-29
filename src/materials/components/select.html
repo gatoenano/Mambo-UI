@@ -1,7 +1,79 @@
-<select name="" id="">
-	<option value="">Option 1</option>
-	<option value="">Option 2</option>
-	<option value="">Option 3</option>
-	<option value="">Option 4</option>
-	<option value="">Option 5</option>
-</select>
+---
+notes: |
+    <p>The `select` component has two classes for choose the position of the label and one more for error status:</p>
+    <div class="m-b-3">
+        <p class="m-b-1">
+            <code>.ui-select-label-text</code>: <span>shows the label above the select.</span><br />
+            <code>.ui-select-label-text_left</code>: <span>shows the label at left of the select.</span><br />
+            <code>.ui-select_error</code>: <span>highlights an error showing the label and select in red.</span><br />
+            With the <code>:disabled</code> property, the select element appears with disabled style.<br />
+        </p>
+    </div> 
+---
+
+<div class="row">
+    <!-- label above select -->
+    <div class="ui-select m-l-3">
+        <label class="ui-select-label">
+            <span class="ui-select-label-text">Select with text above</span>
+            <select name="" class="ui-select-options">
+                <option value="">Lorem ipsum</option>
+                <option value="">dolor sit amet</option>
+                <option value="">adipisicing elit</option>
+                <option value="">sed do</option>
+                <option value="">tempor incididunt ut</option>
+            </select>
+            <svg class="ui-select-arrow">
+                <use xlink:href="static/sprite.symbol.svg#icon-arrow-left" />
+            </svg>
+        </label>
+    </div>
+    <!-- label at left of select -->
+    <div class="ui-select m-l-3">
+        <label class="ui-select-label">
+            <span class="ui-select-label-text ui-select-label-text_left">Select with text at left</span>
+            <select name="" class="ui-select-options">
+                <option value="">Lorem ipsum</option>
+                <option value="">dolor sit amet</option>
+                <option value="">adipisicing elit</option>
+                <option value="">sed do</option>
+                <option value="">tempor incididunt ut</option>
+            </select>
+            <svg class="ui-select-arrow">
+                <use xlink:href="static/sprite.symbol.svg#icon-arrow-left" />
+            </svg>
+        </label>
+    </div>
+    <!-- select disabled -->
+    <div class="ui-select">
+        <label class="ui-select-label m-l-3">
+            <span class="ui-select-label-text">Disabled select</span>
+            <select name="" class="ui-select-options" disabled>
+                <option value="">Lorem ipsum</option>
+                <option value="">dolor sit amet</option>
+                <option value="">adipisicing elit</option>
+                <option value="">sed do</option>
+                <option value="">tempor incididunt ut</option>
+            </select>
+            <svg class="ui-select-arrow">
+                <use xlink:href="static/sprite.symbol.svg#icon-arrow-left" />
+            </svg>
+        </label>
+    </div>
+    <!-- select error -->
+    <div class="ui-select ui-select_error">
+        <label class="ui-select-label m-l-3">
+            <span class="ui-select-label-text">Disabled select</span>
+            <select name="" class="ui-select-options">
+                <option value="">Lorem ipsum</option>
+                <option value="">dolor sit amet</option>
+                <option value="">adipisicing elit</option>
+                <option value="">sed do</option>
+                <option value="">tempor incididunt ut</option>
+            </select>
+            <svg class="ui-select-arrow">
+                <use xlink:href="static/sprite.symbol.svg#icon-arrow-left" />
+            </svg>
+        </label>
+    </div>
+</div>
