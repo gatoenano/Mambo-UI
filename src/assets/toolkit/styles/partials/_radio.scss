@@ -1,0 +1,99 @@
+//# Radtio button config
+$bg-radio-primary-color : $color-orange;
+
+//# Radio button style
+.ui-radio {
+    display: flex;
+    position: relative;
+
+    & .ui-radio-input {
+        cursor: pointer;
+        visibility: hidden;
+
+        &:checked {
+
+            & + label {
+                background-color: $bg-radio-primary-color;
+                border-color: $bg-radio-primary-color;
+
+                &:after {
+                    opacity: 1;
+                }
+
+                &:hover {
+                    border-color: rgba(0, 0, 0, 0.6);
+                }
+            }
+        }
+
+        &:disabled {
+
+            & + label {
+                border-color: $color-grey-light-2;
+                cursor: auto;
+            }
+
+            & ~ .ui-radio-text {
+                color: $color-grey-light-2;
+            }
+
+            &:checked {
+
+                & + label {
+                    background-color: $color-grey-light-2;
+                    border-color: $color-grey-light-2;
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    & .ui-radio-label {
+        align-items: center;
+        border-radius: 1rem;
+        border: 1px solid #d8d8d8;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        height: 1rem;
+        left: 0;
+        margin: 0;
+        width: 1rem;
+        position: absolute;
+
+        &:after {
+            background-color: white;
+            border-radius: 1rem;
+            content: '';
+            padding: 0.1875rem;
+        }
+
+        &:hover {
+            border-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    & .ui-radio-text {
+        font-size: px2rem(13px);
+        margin-left: 0.7rem;
+    }
+
+    &.ui-radio_error {
+        color: $color-red-1;
+
+        & .ui-radio-label {
+            border-color: $color-red-1;
+
+            &:hover {
+                border-color: $color-red-1;
+            }
+        }
+
+        & .ui-radio-text {
+            color: $color-red-1;
+        }
+    }
+}
