@@ -174,3 +174,13 @@
         }
     }
 }
+
+// Fabricator default layout -> Modal
+.ui-modal {
+
+    & textarea {
+        border: 1px solid #ccc;
+        font-size: 0.875rem;
+        padding: 1rem;
+    }
+}
