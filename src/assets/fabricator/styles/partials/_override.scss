@@ -142,15 +142,31 @@
 
         & svg {
             align-self: center;
+            cursor: pointer;
             fill: #979797;
             height: 2rem;
             width: 2rem;
+
+            &:hover {
+                -ms-transform: scale(2, 2);
+                -webkit-transform: scale(2, 2);
+                transform: scale(2, 2);
+                -ms-transition: all .2s ease-out;
+                -webkit-transition: all .2s ease-out;
+                transition: all .2s ease-out;
+                fill: black;
+
+                &.icon-view_reverse {
+                    fill: transparent;
+                    stroke: black;
+                }
+            }
         }
 
         & .icon-view_reverse {
             stroke: #979797;
             fill: transparent;
-            stroke-width: 0.1rem;
+            width: 2.1rem;
         }
 
         & code {
