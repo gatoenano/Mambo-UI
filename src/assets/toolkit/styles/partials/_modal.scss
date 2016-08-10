@@ -1,0 +1,80 @@
+//# Modal config
+$modal-overlay-bg-color: rgba(0, 0, 0, 0.6);
+$modal-dialog-max-width: map-get($container-max-widths, "md");
+$modal-dialog-min-width: 320px;
+$modal-dialog-bg-color: $color-light;
+$modal-dialog-header-title-color: $color-dark;
+$modal-dialog-close-color: $color-grey-dark-3;
+
+//# Modal style
+.ui-modal {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translate(0, -120%);
+    z-index: 1080;
+    @include transition(opacity .2s ease-out);
+
+    &.ui-modal-show {
+        opacity: 1;
+        transform: translate(0, 0);
+
+        & .ui-modal-dialog {
+            background-color: $modal-dialog-bg-color;
+            display: flex;
+            flex-direction: column;
+            max-width: $modal-dialog-max-width;
+            min-width: $modal-dialog-min-width;
+            padding: 1rem 1.5rem;
+            position: relative;
+            z-index: 1081;
+
+            & .ui-modal-dialog-close {
+                align-self: flex-end;
+                cursor: pointer;
+                fill: $modal-dialog-close-color;
+                margin: 0.3rem 0.3rem 0 0;
+                position: absolute;
+            }
+
+            & .ui-modal-dialog-header {
+                display: flex;
+                margin-bottom: 1rem;
+
+                & .ui-modal-dialog-header-title {
+                    color: $modal-dialog-header-title-color;
+                    font-size: 1rem;
+                    margin: 0;
+                }
+            }
+
+            & .ui-modal-dialog-body {
+                display: flex;
+            }
+
+            & .ui-modal-dialog-footer {
+                display: flex;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+        }
+
+        &:before {
+            background-color: $modal-overlay-bg-color;
+            bottom: 0;
+            content: '';
+            height: 100%;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
+}

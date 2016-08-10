@@ -30,6 +30,43 @@
 
 	{{#if fabricator}}
 		</div>
+
+
+		<!-- Modal -->
+	    <div class="ui-modal">
+	        <div class="ui-modal-dialog">
+                <svg class="icon-close ui-modal-dialog-close js-modal-trigger">
+					<use xlink:href="static/sprite.symbol.svg#icon-close" />
+				</svg>
+	            <div class="ui-modal-dialog-header">
+	                <h3 class="ui-modal-dialog-header-title">Modificar datos personales</h3>
+	            </div>
+	            <div class="ui-modal-dialog-body">
+		            <div class="width-breakpoint-md">
+				        <textarea name="" class="col-xs-12" cols="30" rows="10" placeholder="Escribe tu petición..."></textarea>
+		            </div>
+	            </div>
+	            <div class="ui-modal-dialog-footer">
+	                <button class="btn btn-save">Enviar datos</button>
+	            </div>
+	        </div>
+	    </div>
+
+	    <script type="text/javascript">
+	        var modal = document.querySelector('.ui-modal'),
+	            modalTriggers = document.querySelectorAll('.js-modal-trigger');
+	            modalTriggers = [].slice.call(modalTriggers);
+
+	        if(modal && modalTriggers){
+			    modalTriggers.forEach( function(item) {
+			        item.addEventListener("click", function() {
+		                modal.classList.toggle('ui-modal-show');
+		            });
+			    });
+	        }
+	    </script>
+		<!-- /Modal -->
+
 	<script src="{{baseurl}}/assets/fabricator/scripts/f.js"></script>
 	{{/if}}
 

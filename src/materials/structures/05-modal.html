@@ -1,0 +1,13 @@
+---
+example: " <div class='ui-modal'>\n     <div class='ui-modal-dialog'>\n         <svg class='icon-close ui-modal-dialog-close js-modal-trigger'>\n             <use xlink:href='static/sprite.symbol.svg#icon-close' />\n         </svg>\n         <div class='ui-modal-dialog-header'>\n             <h3 class='ui-modal-dialog-header-title'>Modificar datos personales</h3>\n         </div>\n         <div class='ui-modal-dialog-body'>\n             <div class='width-breakpoint-md'>\n                 <textarea name=' class='col-xs-12' cols='30' rows='10' placeholder='Escribe tu petición...'></textarea>\n             </div>\n         </div>\n         <div class='ui-modal-dialog-footer'>\n             <button class='btn btn-save'>Enviar datos</button>\n         </div>\n     </div>\n </div>"
+notes: "<p>The `modal` component has one class for toggle the visibility of the modal <code>.ui-modal-show</code></p>\n <p><strong>Note: the used javascript and the css class <code>.js-modal-trigger</code> it's only for presentation purposes and it's a proposal of modal use, is not included in the toolkit.</strong></p>"
+---
+
+<div class="f-item-code">
+    <p>Modal example</p>
+    <pre><code class="language-markup">{{example}}</code></pre>
+</div>
+<div class="row">
+    <!-- Modal trigger -->
+    <a href="javascript:void(0);" class="btn btn-primary js-modal-trigger">Modal!</a>
+</div>
