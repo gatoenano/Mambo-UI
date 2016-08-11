@@ -141,6 +141,32 @@
     right: 0;
     top: 0;
 }
+// circular navigation element
+.circles {
+    position: relative;
+
+    & .circles-group {
+        display: flex;
+        left: 2vw;
+        position: absolute;
+        top: -10vh;
+
+        & .circle {
+            background-color: $color-light;
+            border-radius: 1rem;
+            content: '';
+            display: block;
+            height: px2rem(6px);
+            margin: 0 0.3rem;
+            width: px2rem(6px);
+
+            &.circle_active {
+                background-color: $color-orange;
+            }
+        }
+    }
+}
+
 // container widths
 @each $name, $width in $container-max-widths {
     .width-container-#{$name} {
