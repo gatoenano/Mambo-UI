@@ -14,7 +14,7 @@ $btn-delete-bg: $color-grey-light-1;
 $btn-disabled-bg: $color-orange;
 
 // paddings
-$btn-padding-x: 1.910rem;
+$btn-padding-x: 1rem;
 $btn-padding-y: .220rem;
 
 // paddings xs
@@ -35,6 +35,12 @@ $btn-padding-y-lg: $btn-padding-y;
 // font config lg
 $font-size-lg: 0.875rem;
 $line-height-lg: 1.5;
+
+//# Button mixins
+// rules for smallest size buttons
+@mixin xs-devices-rules() {
+    @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $line-height-xs, $btn-border-radius-xs);
+}
 
 //# Buttons style
 .btn {
@@ -144,11 +150,11 @@ $line-height-lg: 1.5;
     }
 
     &.btn-icon_left {
-        left: -0.5rem;
+        left: -0.4rem;
     }
 
     &.btn-icon_right {
-        right: -0.5rem;
+        right: -0.4rem;
     }
 }
 // button sizes
@@ -172,4 +178,24 @@ fieldset[disabled] a.btn {
 // remove all backgrounds
 .btn-primary-outline {
     @include button-outline-variant($btn-primary-bg);
+}
+// automatically goes to the smallest size
+.btn-auto-xs {
+    // Media queries rules
+    @include media-breakpoint-down(xs) {
+        @include button-size($btn-padding-y-xs, $btn-padding-x-xs!important, $font-size-xs, $line-height-xs, $btn-border-radius-xs);
+
+        & .btn-icon_auto {
+            display: inline-block;
+        }
+
+        & .btn-icon_show {
+            left: 0 !important;
+
+            & ~ .btn-icon_auto {
+                display: none;
+            }
+        }
+    }
+
 }
