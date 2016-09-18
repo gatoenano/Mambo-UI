@@ -2,7 +2,7 @@
 // ui-alert rules for extra-small devices
 @mixin xs-devices-rules() {
     .ui-alert-icon.ui-alert-icon_show {
-        margin-left: -1.3rem;
+        margin-left: -1.5rem;
     }
     .ui-alert-interaction {
         padding: 0;
@@ -56,7 +56,7 @@
 
     & .ui-alert-text {
         font-size: px2rem(13px);
-        height: 2.2rem;
+        height: 1.150rem;
         margin: 0 0 0.2rem 0;
         overflow: hidden;
 
@@ -98,6 +98,7 @@
     // Media queries rules
     @include media-breakpoint-down(xs) {
         @include xs-devices-rules;
+        padding-left: 0.650rem !important;
     }
     @include media-breakpoint-down(sm) {
         .row [class*='col-'] {
@@ -109,6 +110,7 @@
     &.ui-alert-xs {
         .row [class*='col-'] {
             @include no-padding('all');
+            padding-left: 0.650rem !important;
         }
         @include xs-devices-rules;
     }
