@@ -238,14 +238,6 @@
 
         &:hover{
             color: #f7f7f7 !important;
-
-            &:after {
-                height: 100%;
-                left: -10%;
-                opacity: 0.2;
-                width: 100%;
-                z-index: -1;
-            }
         }
 
     }
