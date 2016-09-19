@@ -135,6 +135,7 @@
                 text-decoration: none;
                 width: 100%;
 
+                &.active,
                 &:active,
                 &:focus,
                 &:hover {
