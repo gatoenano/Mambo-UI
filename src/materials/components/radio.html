@@ -3,6 +3,7 @@ notes: |
     <p>The `radio-button` component with the <code>:disabled</code> property, appears with disabled style. Also, for error status in red.</p>
     <div class="m-b-3">
         <p class="m-b-1">
+            <code>.ui-radio_global</code>: <span>applies the color grey related to the "Global" section at the app.</span><br />
             <code>.ui-radio_error</code>: <span>highlights an error showing the label and radio in red.</span><br />
             With the <code>:disabled</code> property, the radio element appears with disabled style.
         </p>
@@ -16,16 +17,22 @@ notes: |
         <label for="radio1" class="ui-radio-label"></label>
         <span class="ui-radio-text">Default radio-button</span>
     </div>
+    <!-- default radio-button global-->
+    <div class="ui-radio ui-radio_global m-l-3">
+        <input id="radio2" class="ui-radio-input" type="radio" name="radioGroupName" checked />
+        <label for="radio2" class="ui-radio-label"></label>
+        <span class="ui-radio-text">Default radio-button global</span>
+    </div>
     <!-- radio-button disabled -->
     <div class="ui-radio m-l-3">
-        <input id="radio2" class="ui-radio-input" type="radio" name="radioGroupName" disabled />
-        <label for="radio2" class="ui-radio-label"></label>
+        <input id="radio3" class="ui-radio-input" type="radio" name="radioGroupName" disabled />
+        <label for="radio3" class="ui-radio-label"></label>
         <span class="ui-radio-text">Disabled radio-button</span>
     </div>
     <!-- radio-button error -->
     <div class="ui-radio ui-radio_error m-l-3">
-        <input id="radio3" class="ui-radio-input" type="radio" name="radioGroupName" />
-        <label for="radio3" class="ui-radio-label"></label>
+        <input id="radio4" class="ui-radio-input" type="radio" name="radioGroupName" />
+        <label for="radio4" class="ui-radio-label"></label>
         <span class="ui-radio-text">radio-button error</span>
     </div>
 </div>

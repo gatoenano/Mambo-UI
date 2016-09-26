@@ -52,6 +52,17 @@ $bg-radio-primary-color : $color-orange;
         }
     }
 
+    &.ui-radio_global {
+        & .ui-radio-input {
+            &:checked {
+                & + label {
+                    background-color: $color-grey-dark-2;
+                    border-color: $color-grey-dark-2;
+                }
+            }
+        }
+    }
+    
     & .ui-radio-label {
         align-items: center;
         border-radius: 1rem;
