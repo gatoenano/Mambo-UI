@@ -3,6 +3,7 @@ notes: |
     <p>The `checkbox` component with the <code>:disabled</code> property, appears with disabled style. Also, for error status in red.</p>
     <div class="m-b-3">
         <p class="m-b-1">
+            <code>.ui-checkbox_global</code>: <span>applies the color grey related to the "Global" section at the app.</span><br />
             <code>.ui-checkbox_error</code>: <span>highlights an error showing the label and checkbox in red.</span><br />
             With the <code>:disabled</code> property, the checkbox element appears with disabled style.<br />
         </p>
@@ -16,16 +17,22 @@ notes: |
         <label for="input1" class="ui-checkbox-label"></label>
         <span class="ui-checkbox-text">Default checkbox</span>
     </div>
+    <!-- default checkbox global -->
+    <div class="ui-checkbox ui-checkbox_global m-l-3">
+        <input id="input2" class="ui-checkbox-input" type="checkbox" checked/>
+        <label for="input2" class="ui-checkbox-label"></label>
+        <span class="ui-checkbox-text">Default checkbox global</span>
+    </div>
     <!-- checkbox disabled -->
     <div class="ui-checkbox m-l-3">
-        <input id="input2" class="ui-checkbox-input" type="checkbox" checked disabled/>
-        <label for="input2" class="ui-checkbox-label"></label>
+        <input id="input3" class="ui-checkbox-input" type="checkbox" checked disabled/>
+        <label for="input3" class="ui-checkbox-label"></label>
         <span class="ui-checkbox-text">Disabled checkbox</span>
     </div>
     <!-- checkbox error -->
     <div class="ui-checkbox ui-checkbox_error m-l-3">
-        <input id="input3" class="ui-checkbox-input" type="checkbox" />
-        <label for="input3" class="ui-checkbox-label"></label>
+        <input id="input4" class="ui-checkbox-input" type="checkbox" />
+        <label for="input4" class="ui-checkbox-label"></label>
         <span class="ui-checkbox-text">Checkbox error</span>
     </div>
 </div>

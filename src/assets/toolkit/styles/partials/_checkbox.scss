@@ -51,6 +51,17 @@ $bg-select-primary-color : $color-orange;
         }
     }
 
+    &.ui-checkbox_global {
+        & .ui-checkbox-input {
+            &:checked {
+                & + label {
+                    background-color: $color-grey-dark-2;
+                    border-color: $color-grey-dark-2;
+                }
+            }
+        }
+    }
+
     & .ui-checkbox-label {
         border-radius: 0.25rem;
         border: 1px solid #d8d8d8;
