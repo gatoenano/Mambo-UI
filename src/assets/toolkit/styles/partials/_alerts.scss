@@ -14,6 +14,8 @@
 
 //# Alert styles
 .ui-alert {
+    color: $color-dark;
+    
     &.ui-alert-read,
     &.ui-alert-read .ui-alert-header {
         color: $color-grey-dark-2;
@@ -25,7 +27,6 @@
 
     & .ui-alert-header {
         position: relative;
-        color: $color-dark;
 
         & > .ui-alert-icon {
             display: none;
@@ -72,7 +73,6 @@
 
         & .ui-alert-status-text {
             align-self: flex-end;
-            color: $color-grey-dark-2;
             font-size: 0.6875rem;
             padding: 0.2rem 0;
             visibility: hidden;
